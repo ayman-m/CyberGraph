@@ -1,0 +1,18 @@
+operator,description,example
+=,Equal
+!=,Not equal
+<,Less than
+<=,Less than or equal to
+>,Greater than
+>=,Greater than or equal to
+and,Boolean and
+or,Boolean or
+IN,Returns true if the integer or string field value is one of the options specified,"action_local_port in(5900,5999)"
+NOT IN,Returns true if the integer or string field value is not one of the options specified,"str_field in ('*word_1*', '*word_2*', 'word')"
+CONTAINS,Performs a search for an integer or string. Returns true if the speciﬁed string is contained in the ﬁeld,"lowercase(actor_process_image_name) contains 'psexec'"
+NOT CONTAINS,Performs a search for an integer or string. Returns true if the speciﬁed string is not contained in the ﬁeld,"lowercase(actor_process_image_name) not contains 'psexec'"
+~=,Matches a regular expression,"action_process_image_name ~= '.*?\.(?:pdf|docx)\.exe'"
+INCIDR,"Performs a search for an IPv4 address or IPv4 range using CIDR notation, and returns true if the address is in range","action_remote_ip incidr '192.1.1.1/24'"
+NOT INCIDR,"Performs a search for an IPv4 address or IPv4 range using CIDR notation, and returns true if the address is in not range","action_remote_ip not incidr '192.1.1.1/24'"
+INCIDR6,"Performs a search for an IPv6 address or IPv6 range using CIDR notation, and returns true if the address is in range","action_remote_ip incidr6 '3031:3233:3435:3637:0000:0000:0000:0000/64'"
+NOT INCIDR6,"Performs a search for an IPv6 address or IPv6 range using CIDR notation, and returns true if the address is not in range","action_remote_ip not incidr6 '3031:3233:3435:3637:0000:0000:0000:0000/64'"
